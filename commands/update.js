@@ -4,11 +4,11 @@ exports.run = async (client, message, args, level) => {
     exec("git pull", (error, stdout) => {
         const response = (error || stdout);
     });
-    let resp = await client.unloadCommand(args[0]);
-    if (resp) return message.reply(`Error Unloading: ${resp}`);
+    // let resp = await client.unloadCommand(args[0]);
+    // if (resp) return message.reply(`Error Unloading: ${resp}`);
 
-    let r = client.loadCommand(args[0]);
-    if (r) return message.reply(`Error Loading: ${r}`);
+    // let r = client.loadCommand(args[0]);
+    // if (r) return message.reply(`Error Loading: ${r}`);
     
     message.channel.send("Bot is updated, and READY TO ROLL! :white_check_mark:").catch(console.error);
 };
