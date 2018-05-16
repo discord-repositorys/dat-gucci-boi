@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     .setDescription(`Bot Latency: ${msg.createdTimestamp - message.createdTimestamp}ms\nAPI Latency: ${Math.round(client.ping)}ms`)
     .setColor(0x00ff00)
     .setAuthor(`Sent by ${message.author.username}`, message.author.displayAvatarURL);
-  m.edit({em});
+  m.edit({embed: em});
   });
   
 };
