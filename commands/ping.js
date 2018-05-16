@@ -1,11 +1,11 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  const Discord = require("discord.js");
-  const embed = new Discord.RichEmbed()
+  const { MessageEmbed } = require("discord.js");
+  const embed = new MessageEmbed()
     .setTitle("Pinging...")
     .setDescription("Hang in there!")
     .setColor(0x00ff00);
   const msg = message.channel.send({ embed }).then(m => {
-  const em = new Discord.RichEmbed()
+  const em = new MessageEmbed()
     .setTitle("PoIIIING!")
     .setDescription(`Bot Latency: ${msg.createdTimestamp - message.createdTimestamp}ms\nAPI Latency: ${Math.round(client.ping)}ms`)
     .setColor(0x00ff00)
