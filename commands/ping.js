@@ -1,5 +1,5 @@
+const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  const Discord = require("discord.js");
   const em = new Discord.MessageEmbed()
     .setTitle("PoIIIING!")
     .setDescription(`Bot Latency: ${Date.now() - message.createdTimestamp}ms\nAPI Latency: ${Math.round(client.ping)}ms`)
