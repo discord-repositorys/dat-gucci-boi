@@ -1,12 +1,10 @@
-const Discord = require("discord.js");
+const {MessageEmbed} = require("discord.js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  const em = new Discord.MessageEmbed()
-    .setTitle("PoIIIING!")
-    .setDescription(`Bot Latency: ${Date.now() - message.createdTimestamp}ms\nAPI Latency: ${Math.round(client.ping)}ms`)
-    .setColor(0x00ff00)
-    .setAuthor(`Sent by ${message.author.username}`, message.author.displayAvatarURL);
-  message.channel.send({embed: em});
-  };
+  const embed = new MessageEmbed()
+    .setColor(15400990)
+    .setDescription(`:ping_pong: Pong! Time - **${Date.now() - message.createdTimestamp}ms** API Latency is **${Math.round(client.ping)}ms**`);
+  message.channel.send(embed);
+};
   
 
 
@@ -20,6 +18,6 @@ exports.conf = {
 exports.help = {
   name: "ping",
   category: "Utility",
-  description: "It... like... pings. Then Pongs. And it\"s not Ping Pong.",
+  description: "It... like... pings. Then Pongs. And it's not Ping Pong.",
   usage: "ping"
 };
