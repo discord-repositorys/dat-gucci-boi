@@ -66,6 +66,9 @@ const init = async () => {
     client.levelCache[thisLevel.name] = thisLevel.level;
   }
 
+  const Idiot = require("idiotic-api");
+  client.idiotic = new Idiot.Client(client.config.idioticapi, { dev: true });
+
   client.login(client.config.token);
 
 // End top-level async/await function.
