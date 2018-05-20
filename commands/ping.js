@@ -1,4 +1,4 @@
-const {MessageEmbed} = require("discord.js");
+const {MessageEmbed} = require("discord-js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   const embed = new MessageEmbed()
     .setColor(15400990)
