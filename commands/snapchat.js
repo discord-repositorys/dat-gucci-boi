@@ -1,7 +1,7 @@
 const { MessageAttachment } = require("discord.js");
 exports.run = async (client, message, args, level) => {
-    await message.channel.send(new MessageAttachment(
-        await client.idiotic.snapchat(`**${message.author.username}** sent a Snapchat.`, args.join(" ")), "snapchat.png"));
+    await message.channel.send(`**${message.author.username}** sent a Snapchat.`, new MessageAttachment(
+        await client.idiotic.snapchat(args.join(" ")), "snapchat.png"));
 };
 exports.conf = {
     aliases: [],
