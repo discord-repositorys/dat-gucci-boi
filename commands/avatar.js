@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-    const user = message.author || message.mentions.users.first() || await client.fetchUser(args.split(" ")[0]);
+    const user = message.mentions.users.first() || await client.fetchUser(args.split(" ")[0]) || message.author;
     const embed = new MessageEmbed()
         .setTitle(`${user.username}'s avatar`)
         .setImage(user.displayAvatarURL({ format: "png", size: 128 }));
