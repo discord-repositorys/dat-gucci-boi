@@ -2,7 +2,7 @@ const { MessageAttachment } = require("discord.js");
 exports.run = async (client, message, args, level) => {
     const user = message.mentions.users.first() || message.author;
     await message.channel.send(new MessageAttachment(
-        await client.idiotic.missing(user.displayAvatarURL({ format: "png", size: 128 }), user.username), "achievement.png"));
+        await client.idiotic.facepalm(user.displayAvatarURL({ format: "png", size: 128 })), "achievement.png"));
 };
 exports.conf = {
     aliases: [],
@@ -10,8 +10,8 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "missing",
+    name: "facepalm",
     category: "Idiotic",
-    description: "Oof, someone is missing.",
-    usage: "missing <user>"
+    description: "Exactly what the name suggests.",
+    usage: "facepalm <user>"
 };
