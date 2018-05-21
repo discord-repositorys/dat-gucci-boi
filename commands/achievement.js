@@ -1,7 +1,7 @@
 const { MessageAttachment } = require("discord.js");
 exports.run = async (client, message, args, level) => {
     await message.channel.send(new MessageAttachment(
-        await client.idiotic.achievement(message.author.displayAvatarURL({ format: "png", size: 128 }), args), "achievement.png"));
+        await client.idiotic.achievement(message.author.displayAvatarURL({ format: "png", size: 128 }), args.join(" ")), "achievement.png"));
 };
 exports.conf = {
     aliases: [],
