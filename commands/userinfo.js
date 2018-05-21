@@ -2,7 +2,8 @@ exports.run = async (client, message, args, level) => {
     const { MessageEmbed } = require("discord.js");
     const moment = require("moment");
     require("moment-duration-format");
-    const user = message.mentions.users.first() || await client.fetchUser(args[0]) || message.author;
+    //await client.fetchUser(args[0])
+    const user = message.mentions.users.first() || message.author;
     const created_time = moment.duration(Date.now() - message.author.createdTimestamp).format("Y [years], M [months], D [days], H [hrs], m [mins], s [secs]");
     const embed = new MessageEmbed()
         .setTitle("User Info")
