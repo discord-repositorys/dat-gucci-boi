@@ -23,13 +23,13 @@ exports.run = async (client, message, args, level) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["8ball"],
+    aliases: ["ui"],
     permLevel: "User"
 };
 
 exports.help = {
-    name: "eightball",
-    category: "Fun",
-    description: "Not sure? Be sure! Ask the 8ball!",
-    usage: ".eightball question"
+    name: "userinfo",
+    category: "Utility",
+    description: "Get user info!",
+    usage: ".userinfo <user>"
 };
