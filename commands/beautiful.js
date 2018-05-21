@@ -1,6 +1,6 @@
 const { MessageAttachment } = require("discord.js");
 exports.run = async (client, message, args, level) => {
-    await message.channel.send(`**${message.author.name}** is beautiful!`, new MessageAttachment(
+    await message.channel.send(`**${message.author.username}** is beautiful!`, new MessageAttachment(
         await client.idiotic.beautiful(message.author.displayAvatarURL({ format: "png", size: 128 })), "beautiful.png"));
 };
 exports.conf = {
