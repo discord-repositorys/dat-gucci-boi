@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord-js");
+const { MessageEmbed } = require("discord.js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
     const user = message.author || message.mentions.users.first() || await client.fetchUser(args[0]);
     const embed = new MessageEmbed()

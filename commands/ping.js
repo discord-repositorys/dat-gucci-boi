@@ -2,7 +2,7 @@ const {MessageEmbed} = require("discord-js");
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   const embed = new MessageEmbed()
     .setColor(15400990)
-    .setDescription(`:ping_pong: Pong! Time - **${Date.now() - message.createdTimestamp}ms** API Latency is **${Math.round(client.ping)}ms**`);
+    .setDescription(`:ping_pong: Pong! Time - **${Date.now() - message.createdTimestamp}ms** \nAPI Latency is **${Math.round(client.ping)}ms**`);
   message.channel.send(embed);
 };
   
