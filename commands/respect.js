@@ -10,8 +10,8 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "facepalm",
+    name: "respect",
     category: "Idiotic",
-    description: "Exactly what the name suggests.",
-    usage: "facepalm <user>"
+    description: "Give someone your respect.",
+    usage: "respect <user>"
 };
