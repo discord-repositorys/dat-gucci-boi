@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
         .addField("ID", user.id)
         .addField("Registration Date", created_time)
         .addField("Currently Playing", user.presence.game)
-        .addField("Status", user.presence.status)
+        .addField("Status", user.presence.status);
         user.bot ? embed.addField("Bot", "Yes") : embed.addField("Bot", "No");
         user.verified ? embed.addField("Verified User", "Yes") : embed.addField("Verified User", "No");
         

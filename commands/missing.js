@@ -4,7 +4,7 @@ exports.run = async (client, message, args, level) => {
     const user = message.mentions.users.first() || message.author;
     await message.channel.send(`**${user.username}** went missing. OOF!`, new MessageAttachment(
         await client.idiotic.missing(user.displayAvatarURL({ format: "png", size: 128 }), user.username), "achievement.png"));
-    message.channel.stopTyping()
+    message.channel.stopTyping();
     };
 exports.conf = {
     aliases: [],

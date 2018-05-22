@@ -3,7 +3,7 @@ exports.run = async (client, message, args, level) => {
     message.channel.startTyping(1);
     await message.channel.send(`**${message.author.username}** sent a Snapchat.`, new MessageAttachment(
         await client.idiotic.snapchat(args.join(" ")), "snapchat.png"));
-    message.channel.stopTyping()
+    message.channel.stopTyping();
 };
 exports.conf = {
     aliases: [],
