@@ -6,6 +6,9 @@ module.exports = (client, guild) => {
   const embed = new discord.MessageEmbed()
     .setTitle("dat banana bot joined a server!")
     .setDescription(`**${guild.name}**`)
-    .setColor(0x00ff00);
+    .setColor(0x00ff00)
+    .setThumbnail(guild.iconURL)
+    .addField("Member Count", guild.memberCount)
+    .addField("Owner", guild.owner.user.tag);
   chan.send(embed);
 };

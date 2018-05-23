@@ -8,7 +8,10 @@ module.exports = (client, guild) => {
     const embed = new discord.MessageEmbed()
       .setTitle("dat banana bot left a server.")
       .setDescription(`**${guild.name}**`)
-      .setColor(0xf45342);
+      .setColor(0xf45342)
+      .setThumbnail(guild.iconURL)
+      .addField("Member Count", guild.memberCount)
+      .addField("Owner", guild.owner.user.tag);
     chan.send(embed);
   };
 };
