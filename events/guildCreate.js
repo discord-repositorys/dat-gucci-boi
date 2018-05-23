@@ -1,8 +1,6 @@
-// This event executes when a new guild (server) is joined.
+const discord = require("discord.js");
 
 module.exports = (client, guild) => {
-  // We need to add this guild to our settings!
-  const discord = require("discord.js");
   client.settings.set(guild.id, client.config.defaultSettings);
   let chan = client.channels.get("392443319684300801");
   const embed = new discord.MessageEmbed()
