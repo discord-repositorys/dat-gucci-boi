@@ -5,9 +5,9 @@ module.exports = (client, guild) => {
   const discord = require("discord.js");
   client.settings.set(guild.id, client.config.defaultSettings);
   let chan = client.channels.get("392443319684300801");
-  const embed = new discord.RichEmbed()
+  const embed = new discord.MessageEmbed()
     .setTitle("dat banana bot joined a server!")
     .setDescription(`**${guild.name}**`)
     .setColor(0x00ff00);
-  chan.send({ embed });
+  chan.send(embed);
 };
