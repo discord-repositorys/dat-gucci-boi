@@ -16,8 +16,8 @@ exports.run = async (client, message, args, level) => {
     };
 
 exports.help = {
-    name: "batslap",
+    name: "fanslap",
     category: "Idiotic",
-    description: "Slap someone. Hard.",
-    usage: "batslap [user]"
+    description: "Slap someone. OOF!",
+    usage: "fanslap [user]"
 };
