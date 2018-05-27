@@ -132,7 +132,10 @@ module.exports = (client) => {
     client.logger.error(`Uncaught Exception: ${errorMsg}`);
     // Always best practice to let the code crash on uncaught exceptions. 
     // Because you should be catching them anyway.
-    process.exit(1);
+
+    //that was guidebot, I think that's complete bullshit
+    //time to comment this part out bitches
+    //process.exit(1);
   });
 
   process.on("unhandledRejection", err => {
