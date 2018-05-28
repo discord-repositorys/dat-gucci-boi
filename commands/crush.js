@@ -7,7 +7,7 @@ exports.run = async (client, message, args, level) => {
         return;
     }
     await message.channel.send(`owo! **${message.author.username}** has a crush on **${user.username}**! :revolving_hearts:`, new MessageAttachment(
-        await client.idiotic.crush(message.author.displayAvatarURL({ format: "png", size: 128 }), user.displayAvatarURL({ format: "png", size: 128 })), "crush.png"));
+        await client.idiotic.crush(user.displayAvatarURL({ format: "png", size: 128 }), message.author.displayAvatarURL({ format: "png", size: 128 })), "crush.png"));
     message.channel.stopTyping();
 },
     exports.conf = {
