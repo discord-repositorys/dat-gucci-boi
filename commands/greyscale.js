@@ -2,8 +2,8 @@ const { MessageAttachment } = require("discord.js");
 exports.run = async (client, message, args, level) => {
     message.channel.startTyping(1);
     const user = message.mentions.users.first() || message.author;
-    await message.channel.send(`**${user.username}** is full of garbage.`, new MessageAttachment(
-        await client.idiotic.garbage(user.displayAvatarURL({ format: "png", size: 128 })), "garbage.png"));
+    await message.channel.send(`**${user.username}** is in greyscale. This is 2018, people...`, new MessageAttachment(
+        await client.idiotic.greyscale(user.displayAvatarURL({ format: "png", size: 128 })), "greyscale.png"));
     message.channel.stopTyping();
 },
     exports.conf = {
@@ -12,8 +12,8 @@ exports.run = async (client, message, args, level) => {
     };
 
 exports.help = {
-    name: "garbage",
+    name: "greyscale",
     category: "Idiotic",
-    description: "Well then...Someone is garbage.",
-    usage: "garbage <user>"
+    description: "Turn your pic into greyscale!",
+    usage: "greyscale <user>"
 };
