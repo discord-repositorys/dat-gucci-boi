@@ -4,6 +4,7 @@ exports.run = async (client, message, args, level) => {
         message.channel.send("Bruh. You want cursive text? Enter the text.");
         return;
     }
+    message.delete().catch(() => { });
     message.channel.startTyping(1);
     await message.channel.send(await client.idiotic.cursive(args.join(" "), "bold"));
     message.channel.stopTyping();
