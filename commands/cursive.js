@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => {
         return;
     }
     message.channel.startTyping(1);
-    await message.channel.send(await client.idiotic.cursive(args.join(" ")));
+    await message.channel.send(await client.idiotic.cursive(args.join(" "), "bold"));
     message.channel.stopTyping();
 },
     exports.conf = {
