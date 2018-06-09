@@ -9,9 +9,8 @@ exports.run = async (client, message, args, level) => {
         message.reply("you can't do this! You are missing the **Kick Members** permission.");
         return;
     }
-    const username = user.tag
     user.kick()
-    .then(() => message.channel.send(`**${username}** has been successfully kicked out of this server.`))
+    .then((user) => message.channel.send(`**${user.tag}** has been successfully kicked out of this server.`))
     .catch(e => { 
         if (e.status === 403) {
             message.channel.send("I don't have the Kick Members permission, so no can do!");
