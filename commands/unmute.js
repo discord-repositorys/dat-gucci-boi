@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
-    const user = message.mentions.members.first();
+    const user = message.mentions.users.first();
     if (!user) {
         message.channel.send("Please tag a user to unmute them.");
         return;
@@ -19,7 +19,7 @@ exports.run = async (client, message, args, level) => {
                 message.channel.send(`Unexpected error! Details:\n${e}`);
             }
         });
-    message.channel.send(`**${user.user.tag}** has been un-shutted-up. Felt grateful for this, don't ya? :zipper_mouth:`);
+    message.channel.send(`**${user.tag}** has been un-shutted-up. Felt grateful for this, don't ya? :zipper_mouth:`);
 },
     exports.conf = {
         aliases: [],
