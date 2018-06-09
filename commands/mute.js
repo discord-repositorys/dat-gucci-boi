@@ -9,9 +9,10 @@ exports.run = async (client, message, args, level) => {
         message.reply("you can't do this! You are missing the **Ban Members** permission.");
         return;
     }
-    await message.channel.overwritePermissions(user, {
+    message.channel.overwritePermissions(user, {
         SEND_MESSAGES: false
     })
+    .then(() => message.channel.send(`**${user.user.tag}** has been forcefully shutted-up. :zipper_mouth:`))
     .catch(e => {
             if (e.status === 403) {
                 message.channel.send("I don't have the Manage Permissions permission, so no can do!");
@@ -19,7 +20,6 @@ exports.run = async (client, message, args, level) => {
                 message.channel.send(`Unexpected error! Details:\n${e}`);
             }
         });
-    message.channel.send(`**${user.user.tag}** has been forcefully shutted-up. :zipper_mouth:`);
 },
     exports.conf = {
         aliases: [],
