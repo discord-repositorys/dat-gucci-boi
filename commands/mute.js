@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
-    const user = message.mentions.members.first();
+    const user = message.mentions.users.first();
     if (!user) {
         message.channel.send("Please tag a user to mute them.");
         return;
@@ -12,7 +12,7 @@ exports.run = async (client, message, args, level) => {
     message.channel.overwritePermissions(user, {
         SEND_MESSAGES: false
     })
-    .then(() => message.channel.send(`**${user.user.tag}** has been forcefully shutted-up. :zipper_mouth:`))
+    .then(() => message.channel.send(`**${user.tag}** has been forcefully shutted-up. :zipper_mouth:`))
     .catch(e => {
             if (e.status === 403) {
                 message.channel.send("I don't have the Manage Permissions permission, so no can do!");
