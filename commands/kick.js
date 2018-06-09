@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level) => {
         return;
     }
     user.kick()
-    .then((user) => message.channel.send(`**${user.tag}** has been successfully kicked out of this server.`))
+    .then((user) => message.channel.send(`**${user.user.tag}** has been successfully kicked out of this server.`))
     .catch(e => { 
         if (e.status === 403) {
             message.channel.send("I don't have the Kick Members permission, so no can do!");
