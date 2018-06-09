@@ -9,15 +9,15 @@ exports.run = async (client, message, args, level) => {
         message.reply("you can't do this! You are missing the **Kick Members** permission.");
         return;
     }
-    user.kick()
-    .then((user) => message.channel.send(`**${user.user.tag}** has been successfully kicked out of this server.`))
-    .catch(e => { 
-        if (e.status === 403) {
-            message.channel.send("I don't have the Kick Members permission, so no can do!");
-        } else {
-        message.channel.send(`Unexpected error! Details:\n${e}`);
-        }
-    });
+    const kicked_user = await user.kick()
+        .catch(e => {
+            if (e.status === 403) {
+                message.channel.send("I don't have the Kick Members permission, so no can do!");
+            } else {
+                message.channel.send(`Unexpected error! Details:\n${e}`);
+            }
+        });
+    message.channel.send(`**${kicked_user.user.tag}** has been successfully kicked out of this server.`);  
 },
     exports.conf = {
         aliases: [],
