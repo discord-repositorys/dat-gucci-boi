@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 exports.run = async (client, message, args, level) => {
-    message.channel.startTyping(1);
-    const user = message.mentions.users.first();
+    const user = message.mentions.members.first();
     if (!user) {
         message.channel.send("Please tag a user to kick.");
         return;
