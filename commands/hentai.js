@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => {
         const embed = new MessageEmbed()
             .setTitle("Here, have some gucci hentai.")
             .setImage(image)
-            .setFooter(message.author.name, message.author.displayAvatarURL({ format: "png", size: 128 }));
+            .setFooter(message.author.username, message.author.displayAvatarURL({ format: "png", size: 128 }));
         message.channel.send({embed});
     })
     .catch((e) => {
