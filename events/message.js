@@ -45,8 +45,8 @@ module.exports = (client, message) => {
 
   if (level < client.levelCache[cmd.conf.permLevel]) {
     if (settings.systemNotice === "true") {
-      return message.channel.send(`HALT! This command ain't for any normal person.
-  This command requires you to be **${cmd.conf.permLevel}**, while you're just a **${client.config.permLevels.find(l => l.level === level).name}**`); 
+      return message.channel.send(`HALT! This command ain't for any normal person. 
+This command requires you to be **${cmd.conf.permLevel}**, while you're just a **${client.config.permLevels.find(l => l.level === level).name}**`); 
   //${client.levelCache[cmd.conf.permLevel]}
   //Your permission level is ${level} (${client.config.permLevels.find(l => l.level === level).name})
     } else {
